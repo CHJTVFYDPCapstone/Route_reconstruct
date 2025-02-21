@@ -23,8 +23,7 @@ RUN apt-get update && apt-get install -y \
     libcgal-dev \
     libceres-dev \
     nvidia-cuda-toolkit \
-    nvidia-cuda-toolkit-gcc \
-    && rm -rf /var/lib/apt/lists/*
+    nvidia-cuda-toolkit-gcc
 
 # Clone and build COLMAP
 WORKDIR /opt
