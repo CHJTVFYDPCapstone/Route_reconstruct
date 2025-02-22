@@ -36,10 +36,7 @@ RUN git clone https://github.com/colmap/colmap.git && \
     ninja install
 
 # Create output directory
-RUN mkdir -p /workspace/output
-
-# Set default working directory
-WORKDIR /workspace
+RUN mkdir -p output
 
 # Run COLMAP automatically
-CMD ["colmap", "automatic_reconstructor", "--workspace_path", "/workspace/output", "--image_path", "/workspace/Route_reconstruct/test_imgs/e7"]
+CMD ["colmap", "automatic_reconstructor", "--workspace_path", "./output", "--image_path", "../../test_imgs/e7"]
